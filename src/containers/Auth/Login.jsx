@@ -17,7 +17,7 @@ import {
 } from '../../styled/FormStyled';
 import {FcGoogle, } from 'react-icons/fc'
 import { ImFacebook} from 'react-icons/im'
-import { loginEmailPassword, loginGoogle } from '../../actions/authAction';
+import { loginEmailPassword, loginGoogle, loginFacebook } from '../../actions/authAction';
 import { useDispatch, useSelector } from 'react-redux';
 const Login = () => {
     const dispatch = useDispatch();
@@ -38,6 +38,10 @@ const Login = () => {
     
     const handleLoginGoogle = () =>{
         dispatch(loginGoogle());
+    };
+
+    const handleLoginFacebook = ()=>{
+      dispatch(loginFacebook());
     };
 
     return (
@@ -65,7 +69,7 @@ const Login = () => {
               </CardOptionsItem>
 
               <CardOptionsItem>
-                  <ImFacebook size={20} color="#0252BC"/>
+                  <ImFacebook size={20} color="#0252BC" onClick={ handleLoginFacebook}/>
               </CardOptionsItem>
             </CardOptions>
           </CardFieldset>

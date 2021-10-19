@@ -3,8 +3,19 @@ export const types = {
     logout: 'logout',
 
     addCart: 'addCart',
+    removeCart: 'removeCart',
+    clearCart: 'clearCart',
     checkOutRequest: 'checkOutRequest',
     checkOutSuccess: 'checkOutSuccess',
     checkOutFailure: 'checkOutFailure',
-    receiveProduct: 'receiveProduct'
+    receiveProduct: 'receiveProduct',
+
+
+    GET_PRODUCTS: 'GET_PRODUCTS',
+    SELECT_PRODUCT: 'SELECT_PRODUCT',
+    REMOVE_SELECTED_PRODUCT: 'REMOVE_SELECTED_PRODUCT',
+    addProduct: 'addProduct',
+    
+    editProduct: 'editProduct',
+
 }

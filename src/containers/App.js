@@ -2,6 +2,9 @@ import React from 'react';
 import Banner from '../components/Banner';
 import Populary from '../components/Populary';
 import Product from './Product';
+{/*import Dashboard from '../Admin/Dashboard';*/}
+
+
 
 
 function App() {
@@ -9,7 +12,8 @@ function App() {
     <div>
       <Banner />
       <Product />
-      <Populary/>
+      <Populary/> 
+     {/* <Dashboard /> */}
     </div>
   );
 }

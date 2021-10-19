@@ -13,6 +13,9 @@ import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { AuthRouter } from './AuthRoute';
 import { Spinner } from 'react-bootstrap';
+import Checkout from '../components/Checkout';
+
+
 
 const AppRouter = () => {
     const dispatch = useDispatch();
@@ -34,7 +37,7 @@ const AppRouter = () => {
     if (cheking) {
       return (
         <Spinner animation="border" role="status">
-          <span className="visually-hidden"> Loading...</span>
+          <span className="text-center visually-hidden"> Loading...</span>
         </Spinner>
       );
     }
@@ -60,8 +63,13 @@ const AppRouter = () => {
           component={Product}
           isAuthenticated={isLooggedIn}
         />
-
         
+        <PrivateRoute
+            exact
+            path='/Checkout'
+            component={Checkout}
+            isAuthenticated={isLooggedIn}
+          />
 
         <Redirect to='/auth/login' />
       </Switch>

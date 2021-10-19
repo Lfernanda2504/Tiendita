@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-//import { useSelector } from 'react-redux';
-import axios from "axios";
 import {
   Card,
   ContainerProducts,
@@ -10,42 +8,70 @@ import {
   CardText,
   CardTitle,
   Button,
-  H3Title
+  H3Title,
 } from "../styled/CardStyled";
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "../actions/productsAction";
+import DetailsProduct from '../components/DetailsProduct'
+import { addCart } from "../actions/cartAction";
 
-const   Populary = () => {
-    const [fruits, setfruits] = useState([]);
- // const { products } = useSelector(state => state.products)
-  
+const Populary = () => {
+  const dispatch = useDispatch();
+  const { products } = useSelector((state) => state.products);
+  const [show, setShow] = useState(false);
+  const [selectProduct, setSelectProduct] = useState({});
+
+  //console.log(products)
+
+
   useEffect(() => {
-    axios.get(`http://localhost:3004/frutas_verduras`).then((res) => {
-      const listFruits= res.data;
-      setfruits(listFruits);
-      console.log(listFruits);
-    });
+    dispatch(getProducts());
   }, []);
-    return (
+  
+  const handleClose = () => setShow(false);
+
+  const handleShow = (ele) => {
+    setShow(true);
+    setSelectProduct(ele.id);
+  };
+
+  const fruits = products.filter((fruit) => fruit.category === 'frutasVerduras');
+  
+
+  const handleAddCart = (ele) => {
+    dispatch(addCart(ele));
+    console.log(ele)
+  };
+
+  return (
     <ContainerProducts>
-      <H3Title> Mas Populares</H3Title>
+      <H3Title>Frutas y verduras</H3Title>
       <Products>
-        { fruits.map((ele) =>(
-        <Card key={ele.id}>
-          <CardImg src={ele.imagen} />
-          <CardBody>
-            <CardText>
-              <strong>{ele.peso} </strong>
-            </CardText>
-            <CardTitle>{ele.nombre}</CardTitle>
-          </CardBody>
-          <Button>Agregar</Button>
-        </Card>
+        {fruits.map((ele, index) => (
+          <>
+            <DetailsProduct
+              id={selectProduct}
+              show={show}
+              element={ele.id}
+              onHide={() => setShow(false)}
+              handleAddCart={handleAddCart}
+              
+            />
+            <Card key={index}>
+              <CardImg src={ele.imagen} onClick={() => handleShow(ele)} />
+              <CardBody>
+                <CardText>
+                  <strong>{ele.peso} </strong>
+                </CardText>
+                <CardTitle>{ele.nombre}</CardTitle>
+              </CardBody>
+              <Button onClick={()=> handleAddCart(ele)}>Agregar</Button>
+            </Card>
+          </>
         ))}
       </Products>
-    </ContainerProducts> 
-    )
-}
+    </ContainerProducts>
+  );
+};
 
-export default Populary
-
-
-
+export default Populary;

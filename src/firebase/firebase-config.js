@@ -1,6 +1,8 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
+import 'firebase/firebase-functions';
+import 'firebase/database';
 
 const firebaseConfig = {
     apiKey: "AIzaSyBScbaX_dr_ctN1T9tHIvSyfBpyHFKn1hc",
@@ -13,14 +15,23 @@ const firebaseConfig = {
   };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
+//const usersRef = db.collection('users')
 const db = firebase.firestore();
 const google = new firebase.auth.GoogleAuthProvider();
 const facebook = new firebase.auth.FacebookAuthProvider();
+const functions = firebase.functions();
+const database =  firebase.database();
+
+
+
+
 
 export {
     db,
     google,
     facebook,
-    firebase
+    firebase,  
+    functions,
+    database as default
 }
+

@@ -45,7 +45,10 @@ export const CardImg = styled.img`
 `;
 export const CardText = styled.p`
     margin-top: 0;
-    margin-bottom: 1rem;`;
+    margin-bottom: 1rem;
+    text-align: justify;
+    `;
+    
 
 export const CardBody = styled.div`
     display: block;
@@ -62,6 +65,7 @@ export const CardTitle = styled.h5`
     font-weight: 500;
     line-height: 1.2;
     color: black;
+    text-align: justify;
     `;
 
 export const ContainerProducts = styled.div`
@@ -99,5 +103,13 @@ export const H3Title = styled.h3`
     text-align: justify;
     margin: 1rem;
 
+`;
 
+export const SelectMadurez = styled.select`
+     background: transparent;
+     border: none;
+     font-size: 1rem;
+     height: 30px;
+     padding: 5px;
+     width: 10rem;
 `;

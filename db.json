@@ -1,13 +1,14 @@
 {
     
     
-    "Despensa":[
+    "Product":[
         {
             "id": 1,
             "imagen": "https://res.cloudinary.com/academia/image/upload/v1630508838/tienda/7702511002933_wxx85h.jpg",
             "nombre": "Lentejas Diana",
             "descripcion": "Los granos Diana son una excelente fuente de hierro y fibra para tu familia. Los frijoles y lentejas Diana aportan el 20% o más del valor diario requerido de esos nutrientes, basados en una dieta de 2.000 calorías",
             "precio": 2590,
+            "category": "despensa",
              "peso": "500g",
             "cantidad": 1,
             "totalPrecio": 2590,
@@ -19,6 +20,7 @@
             "nombre": "Chocolate Resellable Corona",
             "descripcion": "Disfruta la mejor tradición compartiendo una deliciosa taza de chocolate con los que más quieres y sigue viviendo esos buenos momentos de siempre.",
             "precio": 6190,
+            "category": "despensa",
              "peso": "500g",
             "cantidad": 1,
             "totalPrecio": 6190,
@@ -30,6 +32,7 @@
             "nombre": "Sal Refisal ",
             "descripcion": "Sal Refisal es la sal que no puede faltar en la cocina y en la mesa",
             "precio": 1790,
+            "category": "despensa",
              "peso": "1000g",
             "cantidad": 1,
             "totalPrecio": 1790,
@@ -41,6 +44,7 @@
             "nombre": "Leche entera bolsa por 6 unidades Colanta ",
             "descripcion": "Aporta una gran cantidad de vitaminas y prebióticos ideales para el cuidado de tu familia.",
             "precio": 19590,
+            "category": "despensa",
              "peso": "6L",
             "cantidad": 6,
             "totalPrecio": 19590,
@@ -52,6 +56,7 @@
             "nombre": "Aceite Oleocali garrafa x 3000ml ",
             "descripcion": "Todo lo que necesitas en aceites encuéntralos en nuestra tienda online",
             "precio": 22490,
+            "category": "despensa",
              "peso": "3L",
             "cantidad": 1,
             "totalPrecio": 22490,
@@ -63,6 +68,7 @@
             "nombre": "Harina PAN Blanca x 1000 g",
             "descripcion": "Harina P.A.N. es un producto único hecho a base de puro maíz, que permite la preparación de deliciosos y variados platos propios de cada cultura, disfrútala en todas sus presentaciones, Blanca, Amarilla y Dulce.",
             "precio": 3390,
+            "category": "despensa",
              "peso": "1000g",
             "cantidad": 1,
             "totalPrecio": 3390,
@@ -74,6 +80,7 @@
             "nombre": "Pasta Clásica Spaghetti Doria x 1000 g.",
             "descripcion": "El Spaghetti es una pasta larga con múltiples y fáciles formas de preparación; perfecta para acompañar con salsas, carnes y verduras. Disfruta de un plato tradicional y nutritivo, elaborado con sémola de trigos importados y fortificado con Nutrivit para una buena alimentación. Mezcla de semolato de trigo fortificado y agua, adicionada con una mezcla de micronutrientes compuesta por vitamina A, acido folico, Hierro y zinc.",
             "precio": 4790,
+            "category": "despensa",
              "peso": "1000g",
             "cantidad": 1,
             "totalPrecio": 4790,
@@ -85,30 +92,30 @@
             "nombre": "Maíz Tierno San Jorge x 2 und.x 190 g ",
             "descripcion": "Producto listo para el consumo, utilizado en preparación de arroces, ensaladas y sopas. Producto dirigido a niños mayores de 4 años y adultos",
             "precio": 7190,
+            "category": "despensa",
              "peso": "190g",
             "cantidad": 2,
             "totalPrecio": 7190,
              "isChecked": "false"
-        }
-    ],
-
-    "frutas_verduras":[
-        { "id": 1,
+        },
+        { "id": 9,
             "imagen": "https://res.cloudinary.com/academia/image/upload/v1630538288/tienda/3452_tejozz.jpg",
             "nombre": "Papaya llanera ",
             "descripcion": "Lleva a tu casa lo mejor en frutas y hortalizas, que han sido seleccionadas y clasificadas, con los mejores estándares de calidad que te ofrece la tiendita",
             "precio": 9636,
+            "category": "frutasVerduras",
             "madurez":[ "Maduro", "Normal", "Verde"],
              "peso": "2000g",
             "cantidad": 2,
             "totalPrecio": 9636,
              "isChecked": "false"
         },
-        { "id": 2,
+        { "id": 10,
             "imagen": "https://res.cloudinary.com/academia/image/upload/v1630539389/tienda/2.naranja_cxc78n.jpg",
             "nombre": "Naranja Valencia x 500 g ",
             "descripcion": "crea deliciosas recetas con nuestro producto naranja valencia para compartir en familia.",
             "precio": 1490,
+            "category": "frutasVerduras",
             "madurez":[ "Maduro", "Normal", "Verde"],
              "peso": "500g",
             "cantidad": 1,
@@ -116,11 +123,12 @@
              "isChecked": "false"
         },
         { 
-            "id": 3,
+            "id": 11,
             "imagen": "https://res.cloudinary.com/academia/image/upload/v1630536396/tienda/foto-arandanos-Editada_wykf1f.jpg",
             "nombre": "Arándanos x 500 g",
             "descripcion": "Deliciosos arándanos dulces que le dan un toque a tus preparaciones.",
             "precio": 16792,
+            "category": "frutasVerduras",
             "madurez":[ "Maduro", "Normal", "Verde"],
              "peso": "500g",
             "cantidad": 1,
@@ -128,11 +136,12 @@
              "isChecked": "false"
         },
         {
-            "id": 5,
+            "id": 12,
             "imagen": "https://res.cloudinary.com/academia/image/upload/v1630536695/tienda/20691356-1_a3kksj.jpg",
             "nombre": "Papa parda pastusa x500g",
             "descripcion": "Lleva a tu casa lo mejor en frutas y hortalizas, que han sido seleccionadas y clasificadas, con los mejores estándares de calidad ",
             "precio": 1485,
+            "category":"frutasVerduras",
             "madurez":[ "Maduro", "Normal", "Verde"],
              "peso": "500g",
             "cantidad": 1,
@@ -140,11 +149,12 @@
              "isChecked": "false"
         },
         {
-            "id": 6,
+            "id": 13,
             "imagen": "https://res.cloudinary.com/academia/image/upload/v1630541549/tienda/1793-1_fm2xb4.jpg",
             "nombre": " Pepino melón x 500 g",
             "descripcion": "Deleita tu paladar con este delicioso Pepino melón x 500 g, prepara nuevas recetas o las más te gusten para darle un toque de sabor a tus comidas.",
             "precio": 6900,
+            "category": "frutasVerduras",
             "madurez":[ "Maduro", "Normal", "Verde"],
              "peso": "500g",
             "cantidad": 1,
@@ -152,11 +162,12 @@
              "isChecked": "false"
         },
         {
-            "id": 7,
+            "id": 14,
             "imagen": "https://res.cloudinary.com/academia/image/upload/v1630541528/tienda/1359_rkzh5q.jpg",
             "nombre": "Aguacate Hass x 500 g",
             "descripcion": "crea deliciosas recetas con nuestro producto aguacate hass para compartir en familia.",
             "precio": 4300,
+            "category": "frutasVerduras",
             "madurez":[ "Maduro", "Normal", "Verde"],
              "peso": "500g",
             "cantidad": 1,
@@ -164,11 +175,12 @@
              "isChecked": "false"
         },
         {
-            "id": 8,
+            "id": 15,
             "imagen": "https://res.cloudinary.com/academia/image/upload/v1630541748/tienda/Zanahoria-20Baby-33383666020_auilua.jpg",
             "nombre": " Zanahoria baby calssic x 450 g",
             "descripcion": "Con cultivos en diferentes climas podemos garantizar la mejor selección de productos hortalizas frescas con calidad y surtido en forma permanente que te trae tiendita",
             "precio": 14850,
+            "category": "frutasVerduras",
             "madurez":[ "Maduro", "Normal", "Verde"],
              "peso": "1000g",
             "cantidad": 1,
