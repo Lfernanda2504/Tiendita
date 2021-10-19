@@ -20,10 +20,7 @@ const Populary = () => {
   const { products } = useSelector((state) => state.products);
   const [show, setShow] = useState(false);
   const [selectProduct, setSelectProduct] = useState({});
-
-  //console.log(products)
-
-
+  
   useEffect(() => {
     dispatch(getProducts());
   }, []);

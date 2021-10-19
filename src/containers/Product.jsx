@@ -29,60 +29,12 @@ const Product = (props) => {
   const dispatch = useDispatch()
  
   const { products } = useSelector(state => state.products)
-  //console.log(products)
-  
+
   const handleAddCart = (ele) => {
     dispatch(addCart(ele));
     console.log(ele)
   };
 
-  {
-    /* <Dashboard /> useEffect(() => {
-    axios.get(`http://localhost:3004/Despensa`).then((res) => {
-      const listDespensa = res.data;
-      setDespensa(listDespensa);
-      console.log(listDespensa);
-    });
-  }, []);
-
-
-  useEffect(()=>{
-    const data = firebase.database().ref('Product');
-    data.once('Product', (snapshot) =>{
-      const all = snapshot.val();
-      const product = [];
-      for (let id in all){
-        product.push({ id, ...all[id]});
-      }
-      setProduct(product);
-    });
-  }, []);
-  
-
-  useEffect(() => {
-    db.collection("Product")
-      .get()
-      .then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-          console.log(doc.data());
-        });
-      });
-  }, []);
-   
-  useEffect(()=>{
-   firebase.database().ref('Product').once('value', (snapshot) =>{
-      const all = snapshot.val();
-      const product = [];
-      for (let id in all){
-        product.push({ id, ...all[id]});
-      }
-      setProduct(product) 
-      
-    });
-  }, []);
- */
-  }
- 
   useEffect(() => {
     dispatch(getProducts())
   }, [])

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Container, Modal, Row, Col, Alert } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Button, SelectMadurez } from "../styled/CardStyled";
-import { FiPlus, FiMinus, FiCheck } from "react-icons/fi";
-import { addCart } from "../actions/cartAction";
+import { FiPlus, FiMinus} from "react-icons/fi";
+
 
 const DetailsProduct = (props) => {
   const { products } = useSelector((state) => state.products);
